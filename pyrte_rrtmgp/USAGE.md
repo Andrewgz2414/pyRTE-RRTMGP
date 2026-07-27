@@ -55,7 +55,14 @@ Two ready-made spectroscopies ship with the module:
   | `h2o-vr`  | 1600      | 52       | 24               |
 
 * {data}`~pyrte_rrtmgp.ssm.SSM_CP26` — Czarnecki and Pincus (2026), which
-  adds an `h2o-cont` continuum tag.
+  adds an `h2o-cont` continuum tag. `pref` attribute: 1000.22 hPa.
+
+  | tag        | nu0 (cm⁻¹) | l (cm⁻¹) | kappa0 (m² kg⁻¹) |
+  |------------|-----------|----------|------------------|
+  | `co2`      | 667.5     | 10.2     | 500              |
+  | `h2o-rot`  | 150       | 58       | 165              |
+  | `h2o-vr`   | 1500      | 60       | 15               |
+  | `h2o-cont` | 700       | 275      | 0.1              |
 
 ### 2. Choose a spectral grid (`nus`, `dnus`)
 
