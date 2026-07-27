@@ -1,12 +1,5 @@
 # The Simple Spectral Model (SSM)
 
-The Simple Spectral Model is a compact longwave gas-optics scheme that replaces
-RRTMGP's correlated *k*-distribution with a handful of analytic spectral
-features. It is designed for idealized climate modeling and teaching: the
-entire spectroscopy fits in a small table, every parameter has a physical
-meaning, and the results plug into the same {class}`solve()<pyrte_rrtmgp.rte>`
-workflow as RRTMGP gas optics.
-
 See [Williams (2026), *Bridging clarity and accuracy: A simple spectral
 longwave radiation scheme for idealized climate modeling*](https://doi.org/10.1029/2025MS005405)
 and Czarnecki and Pincus (2026) for the model formulation, and the Fortran
