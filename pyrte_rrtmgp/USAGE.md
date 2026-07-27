@@ -4,7 +4,7 @@ See [Williams (2026), *Bridging clarity and accuracy: A simple spectral
 longwave radiation scheme for idealized climate modeling*](https://doi.org/10.1029/2025MS005405)
 and [Czarnecki and Pincus (2026), *How clear-sky spectral overlap shapes
 radiation in cloudy atmospheres*](https://journals.ametsoc.org/view/journals/clim/39/14/JCLI-D-25-0589.1.xml)
-for the model formulation, and the Fortran implementation in
+for the model formulation and parameters, and the Fortran implementation in
 [rte-rrtmgp `mo_optics_ssm.F90`](https://github.com/earth-system-radiation/rte-rrtmgp)
 for the reference version this Python port reproduces.
 
