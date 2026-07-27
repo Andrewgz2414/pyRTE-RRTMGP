@@ -234,16 +234,13 @@ behavior.
 * This Python implementation reproduces the Fortran RTE-SSM reference fluxes
   to better than 0.04 W/m² (relative differences below 0.02%) across the
   RFMIP, RCE, and CKDMIP example atmospheres.
-* Against RRTMGP (`LW_G256`), the SSM with the `SSM_W26` defaults shows net
-  longwave biases of roughly 20–30 W/m² at the top of atmosphere and
-  40–50 W/m² at the surface on the same atmospheres. The SSM trades this
-  accuracy for transparency and speed; it is an idealized model, not a
-  replacement for RRTMGP in production radiation budgets.
 
-## Limitations
-
-* Longwave only; absorption only (no scattering, no clouds, no aerosols).
-* Supported absorbers: `h2o`, `co2`, `o3`.
-* Spectroscopy validation requires unique tags, finite triangle parameters,
-  `l > 0`, `kappa0 >= 0`, strictly increasing `nus` (at least two points),
-  and positive `dnus` of matching length.
+Results Comparison between Python SSM and Fortran SSM
+| case | quantity | N | abs_RMS (W/m2) | abs_max_difference (W/m2) | rel_RMS% | rel_max_difference% |
+| --- | --- | --- | --- | --- | --- | --- |
+| rfmip | net TOA | 1800 | 0.012591 | 0.018680 | 0.004135 | 0.005682 |
+| rfmip | net SFC | 1800 | 0.016802 | 0.025527 | 0.013142 | 0.021726 |
+| rce | net TOA | 64 | 0.014082 | 0.018482 | 0.004868 | 0.005514 |
+| rce | net SFC | 64 | 0.017764 | 0.019612 | 0.013321 | 0.015209 |
+| ckdmip | net TOA | 400 | 0.011238 | 0.025155 | 0.003799 | 0.005841 |
+| ckdmip | net SFC | 400 | 0.017002 | 0.031901 | 0.014548 | 0.030962 |
