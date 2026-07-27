@@ -57,31 +57,6 @@ Two ready-made spectroscopies ship with the module:
 * {data}`~pyrte_rrtmgp.ssm.SSM_CP26` — Czarnecki and Pincus (2026), which
   adds an `h2o-cont` continuum tag.
 
-To define your own spectroscopy, build a Dataset in the same layout:
-
-```python
-import numpy as np
-import xarray as xr
-
-my_ssm = xr.Dataset(
-    coords={
-        "tags": ["co2", "h2o-rot"],
-        "params": ["nu0", "l", "kappa0"],
-    },
-    data_vars={
-        "triangles": (
-            ["tags", "params"],
-            np.array(
-                [
-                    [667.0, 12.0, 110.0],  # co2
-                    [0.0, 64.0, 282.0],  # h2o-rot
-                ]
-            ),
-        )
-    },
-)
-```
-
 ### 2. Choose a spectral grid (`nus`, `dnus`)
 
 `nus` are the wavenumbers (cm⁻¹, strictly increasing) at which absorption and
